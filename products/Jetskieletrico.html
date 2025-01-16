@@ -1117,6 +1117,8 @@ for (var attr in meta) {
         <path d="M1 5h20M1 11h20M1 17h20" stroke="currentColor" stroke-linecap="round"></path>
       </svg></button>
 
+      
+
           <a href="/search" class="tap-area sm:hidden" aria-controls="search-drawer">
             <span class="sr-only">Open search</span><svg role="presentation" stroke-width="2" focusable="false" width="22" height="22" class="icon icon-search" viewBox="0 0 22 22">
         <circle cx="11" cy="10" r="7" fill="none" stroke="currentColor"></circle>
@@ -1707,7 +1709,11 @@ for (var attr in meta) {
       --product-gallery-media-list-gap: var(--grid-gutter);
     }
   }
+ 
+  
+  
 </style>
+
 
 <div class="section section--tight  section-blends section-full">
   <div class="product">
@@ -1808,6 +1814,7 @@ for (var attr in meta) {
   
               is="custom-button"onclick="window.location.href='https://seguro.ruswavebr.site/r/13UAMUAX60';"
              >Comprar Agora </button><div data-shopify="payment-button" class="shopify-payment-button"> </small> </div><style>
+              
                     </style></buy-buttons>   
 
   
@@ -1832,6 +1839,7 @@ for (var attr in meta) {
         <span class="sr-only">Preço normal</span>R$389,90</compare-at-price><unit-price form="quick-buy-form-9735933002002-template--22757706531090__main" hidden class="text-subdued text-sm">(/)
       </unit-price></price-list></div>
   </div>
+  
 
   <div class="quick-buy-drawer__info"><div id="shopify-block-AcVhicnEzZWJiT2pSS__49ac7642-5c27-4a9d-b41d-f87a1e8d1fb1-1" class="shopify-block shopify-app-block ali-widget-star-rating"><!-- BEGIN app snippet: config_version_widget --><script type=text/javascript>
     window['__AR_WIDGET_VERSION_GO'] = 1;
@@ -2068,6 +2076,34 @@ for (var attr in meta) {
               font-size: 16px;
               color: #333;
           }
+          .alerta {
+            background-color: #ff6f61; /* Cor de fundo chamativa */
+            color: white; /* Texto branco */
+            font-size: 1.2em; /* Tamanho de fonte ajustado */
+            padding: 15px 20px; /* Espaçamento interno */
+            border-radius: 5px; /* Bordas arredondadas */
+            position: fixed; /* Fixa o alerta na tela */
+            bottom: -100px; /* Inicialmente fora da tela */
+            left: 50%; /* Centraliza horizontalmente */
+            transform: translateX(-50%); /* Ajusta a posição central */
+            font-weight: bold;
+            z-index: 9999; /* Garante que o alerta fique no topo */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+            animation: subirAlerta 3s forwards; /* Animação para subir */
+          }
+          
+          @keyframes subirAlerta {
+            0% {
+              bottom: -100px; /* Começa fora da tela */
+            }
+            50% {
+              bottom: 20px; /* Meia altura do alerta */
+            }
+            100% {
+              bottom: 50px; /* Posição final do alerta */
+            }
+          }
+          
       </style>
       </div>
     </div>
@@ -2349,3 +2385,79 @@ for (var attr in meta) {
 <!-- END sections: footer-group --></main>
   </body>
 </html>
+
+<script src="https://cdn.jsdelivr.net/npm/notiflix@2.6.0/dist/notiflix-aio-2.6.0.min.js"></script>
+
+       <script> /right-top, right-bottom, left-top, left-bottom, center-top, center-bottom, center-center/
+        var position = "left-bottom";
+ 
+        /verde, azul, vermelho, amarelo/
+        var color = "verde";
+ 
+        /fade, zoom, from-right, from-left, from-top, from-bottom/
+        var animation = "from-left";
+ 
+        /nome do produto/
+        var product_name = "";
+ 
+        /frase depois do nome da pessoa/
+        var phrase = "acabou de comprar";
+        var timeout = 4000;
+ 
+        /masc, fem, any/
+        var type_name = "masc, fem";
+        var msg_final = "";
+ 
+        var min_time = 4;
+        var max_time = 19;
+ 
+        var names_masc = ['Jose', 'Joao', 'Antonio', 'Francisco', 'Carlos', 'Paulo', 'Pedro', 'Lucas', 'Luiz', 'Marcos', 'Luis', 'Gabriel', 'Rafael', 'Daniel', 'Marcelo', 'Bruno', 'Eduardo', 'Felipe', 'Rodrigo', 'Manoel', 'Mateus', 'Andre', 'Fernando', 'Fabio', 'Leonardo', 'Gustavo', 'Guilherme', 'Leandro', 'Tiago', 'Anderson', 'Ricardo', 'Marcio', 'Jorge', 'Alexandre', 'Roberto', 'Edson', 'Diego', 'Vitor', 'Sergio', 'Claudio', 'Matheus', 'Thiago', 'Geraldo', 'Adriano', 'Luciano', 'Julio', 'Renato', 'Alex', 'Vinicius', 'Rogerio', 'Samuel', 'Ronaldo', 'Mario', 'Flavio', 'Douglas', 'Igor', 'Davi', 'Manuel', 'Jeferson', 'Cicero', 'Victor', 'Miguel', 'Robson', 'Mauricio', 'Danilo', 'Henrique', 'Caio', 'Reginaldo', 'Joaquim', 'Benedito', 'Gilberto', 'Marco', 'Alan', 'Nelson', 'Cristiano', 'Elias', 'Wilson', 'Valdir', 'Emerson', 'Luan', 'David', 'Renan', 'Severino', 'Fabricio', 'Mauro', 'Jonas', 'Gilmar', 'Jean', 'Fabiano', 'Wesley', 'Diogo', 'Adilson', 'Jair', 'Alessandro', 'Everton', 'Osvaldo', 'Gilson', 'Willian', 'Joel', 'Silvio', 'Helio', 'Maicon', 'Reinaldo', 'Pablo', 'Artur', 'Vagner', 'Valter', 'Celso', 'Ivan', 'Cleiton', 'Vanderlei', 'Vicente', 'Arthur', 'Milton', 'Domingos', 'Wagner', 'Sandro', 'Moises', 'Edilson', 'Ademir', 'Adao', 'Evandro', 'Cesar', 'Valmir', 'Murilo', 'Juliano', 'Edvaldo', 'Ailton', 'Junior', 'Breno', 'Nicolas', 'Ruan', 'Alberto', 'Rubens', 'Nilton', 'Augusto', 'Cleber', 'Osmar', 'Nilson', 'Hugo', 'Otavio', 'Vinicios', 'Italo', 'Wilian', 'Alisson', 'Aparecido'];
+        var names_fem = ['Maria', 'Ana', 'Francisca', 'Antonia', 'Adriana', 'Juliana', 'Marcia', 'Fernanda', 'Patricia', 'Aline', 'Sandra', 'Camila', 'Amanda', 'Bruna', 'Jessica', 'Leticia', 'Julia', 'Luciana', 'Vanessa', 'Mariana', 'Gabriela', 'Vera', 'Vitoria', 'Larissa', 'Claudia', 'Beatriz', 'Rita', 'Luana', 'Sonia', 'Renata', 'Eliane'];
+ 
+        var option = {
+            position: position,
+            cssAnimationStyle: animation,
+            plainText: false,
+            timeout: timeout
+        };
+ 
+        function show_notification() {
+            if (type_name == "masc") {
+                msg_final = "<strong>" + names_masc[Math.floor(Math.random() * names_masc.length)] + "</strong>";
+            } else if (type_name == "fem") {
+                msg_final = "<strong>" + names_fem[Math.floor(Math.random() * names_fem.length)] + "</strong>";
+            } else {
+                var array_aux = ["masc", "fem"];
+ 
+                if (array_aux[Math.floor(Math.random() * array_aux.length)] == "masc") {
+                    msg_final = "<strong>" + names_masc[Math.floor(Math.random() * names_masc.length)] + "</strong>";
+                } else {
+                    msg_final = "<strong>" + names_fem[Math.floor(Math.random() * names_fem.length)] + "</strong>";
+                }
+            }
+ 
+            msg_final += decodeURIComponent(escape(" " + phrase + " " + product_name));
+ 
+            if (color == "verde") {
+                Notiflix.Notify.Success(msg_final, option);
+            }
+ 
+            if (color == "azul") {
+                Notiflix.Notify.Info(msg_final, option);
+            }
+ 
+            if (color == "vermelho") {
+                Notiflix.Notify.Failure(msg_final, option);
+            }
+ 
+            if (color == "amarelo") {
+                Notiflix.Notify.Warning(msg_final, option);
+            }
+ 
+            var rand = Math.floor(Math.random() * (max_time - min_time + 1) + min_time);
+            setTimeout(show_notification, rand * 1000);
+        }
+            setTimeout(show_notification, 4 * 1000);
+</script>
+ 
+
